@@ -10,6 +10,9 @@ virtual filesystem, and a ready-made Settings panel — built for
 portfolio/personal sites that want a fake-OS aesthetic without writing a
 window manager from scratch.
 
+![ToOS in light and dark mode](./.github/assets/screenshot.png)
+<sub>[ToOS-Demo](https://github.com/ToBee94/ToOS-Demo), a standalone app built on this package.</sub>
+
 ```
 guest@demo:~$ ls
 docs/   start   about   terminal   settings   links/
