@@ -104,8 +104,8 @@ export default function Window({
           position: "absolute",
           left: x,
           top: y,
-          width: w != null ? w : tabbed ? "min(94vw, 780px)" : "min(92vw, 620px)",
-          height: h != null ? h : undefined,
+          width: w ?? (tabbed ? "min(94vw, 780px)" : "min(92vw, 620px)"),
+          height: h ?? undefined,
           zIndex: z,
         }
     : undefined;

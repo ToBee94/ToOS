@@ -10,8 +10,8 @@ type State = { seenVersion?: string; read: string[]; deleted: string[] };
 function load(key: string): State {
   if (typeof localStorage === "undefined") return { read: [], deleted: [] };
   try {
-    const s = JSON.parse(localStorage.getItem(key) || "{}");
-    return { seenVersion: s.seenVersion, read: s.read || [], deleted: s.deleted || [] };
+    const s = JSON.parse(localStorage.getItem(key) ?? "{}") as Partial<State>;
+    return { seenVersion: s.seenVersion, read: s.read ?? [], deleted: s.deleted ?? [] };
   } catch {
     return { read: [], deleted: [] };
   }

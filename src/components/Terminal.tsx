@@ -42,7 +42,7 @@ export default function Terminal({ commands, items = [], links = [] }: { command
   const [elevated, setElevated] = useState(false);
   const [history, setHistory] = useState<string[]>(() => {
     if (typeof localStorage === "undefined") return [];
-    try { return JSON.parse(localStorage.getItem(historyKey) || "[]"); } catch { return []; }
+    try { return JSON.parse(localStorage.getItem(historyKey) ?? "[]") as string[]; } catch { return []; }
   });
   const [histPos, setHistPos] = useState<number | null>(null);
   const [rs, setRs] = useState<{ term: string; from: number } | null>(null);
@@ -68,7 +68,7 @@ export default function Terminal({ commands, items = [], links = [] }: { command
   };
   const recall = (dir: number) => {
     if (!history.length) return;
-    let pos = histPos === null ? history.length : histPos;
+    let pos = histPos ?? history.length;
     pos += dir;
     if (pos < 0) pos = 0;
     if (pos >= history.length) { setHistPos(null); setInput(""); return; }
@@ -118,7 +118,7 @@ export default function Terminal({ commands, items = [], links = [] }: { command
       push(chrome.terminal.usageSudo, "text-faint");
       return;
     }
-    const arg = (args.find((a) => !a.startsWith("-")) || "").replace(/^\.?\//, "").replace(/\/$/, "");
+    const arg = (args.find((a) => !a.startsWith("-")) ?? "").replace(/^\.?\//, "").replace(/\/$/, "");
     // `arg` resolved against `cwd` — what `cat`/`open`/`rm` match against.
     // `cd` handles ".."/"~" itself rather than joining them onto `cwd`.
     const path = joinPath(cwd, arg);

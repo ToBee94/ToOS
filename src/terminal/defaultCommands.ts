@@ -1,4 +1,4 @@
-import type { Command, CommandRegistry, CommandCtx } from "./types";
+import type { CommandRegistry, CommandCtx } from "./types";
 import { ACCENTS } from "../lib/themeCtx";
 import { formatUptime } from "../lib/bootCtx";
 import { motdLines } from "../lib/motd";
@@ -228,7 +228,7 @@ export const DEFAULT_COMMANDS: CommandRegistry = {
       const all = flags.includes("a");
       const h = flags.includes("h");
       const own = (root: boolean) => `${(root ? "root" : "user").padEnd(6)} ${(root ? "root" : "user").padEnd(6)}`;
-      const dot = (p: string, n: string) => push(`${p}  ${p[0] === "d" ? "2" : "1"} user   user   ${(h ? "4.0K" : "4096").padStart(6)} Jan  1 00:00 ${n}`, "text-muted");
+      const dot = (p: string, n: string) => push(`${p}  ${p.startsWith("d") ? "2" : "1"} user   user   ${(h ? "4.0K" : "4096").padStart(6)} Jan  1 00:00 ${n}`, "text-muted");
 
       const target = arg ? joinPath(cwd, arg) : cwd;
       const dir = listDir(menu, links, target);
