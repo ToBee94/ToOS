@@ -11,4 +11,6 @@
 For a complete, working example that exercises every feature listed here, see
 **[ToOS-Demo](https://github.com/ToBee94/ToOS-Demo)** — a small standalone app
 you can clone and run (`npm install && npm run dev`) instead of piecing an
-example together from scratch.
+example together from scratch. For a full production site built on ToOS, see
+**[tobee94.de](https://tobee94.de)** — the site this framework was extracted
+from.

@@ -11,7 +11,7 @@ portfolio/personal sites that want a fake-OS aesthetic without writing a
 window manager from scratch.
 
 ![ToOS in light and dark mode](./.github/assets/screenshot.png)
-<sub>[ToOS-Demo](https://github.com/ToBee94/ToOS-Demo), a standalone app built on this package.</sub>
+<sub>[ToOS-Demo](https://github.com/ToBee94/ToOS-Demo), a standalone app built on this package. See [tobee94.de](https://tobee94.de) for a full real-world example — the site this framework was extracted from.</sub>
 
 ```
 guest@demo:~$ ls
@@ -28,7 +28,8 @@ messages). You register your own modules and supply your own copy — ToOS
 is the shell around them.
 
 **[Try the demo →](https://github.com/ToBee94/ToOS-Demo)** (clone it,
-`npm install && npm run dev`) or read the [full documentation](./docs).
+`npm install && npm run dev`), see **[tobee94.de](https://tobee94.de)** for a
+full real-world site built on it, or read the [full documentation](./docs).
 
 ## Features
 
