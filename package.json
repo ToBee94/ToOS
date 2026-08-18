@@ -1,6 +1,6 @@
 {
   "name": "@tobee94/toos",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "ToOS — an open-source, desktop-shell-styled React framework: window manager, fake terminal, theming, boot sequence, and a dynamic module system for pages.",
   "type": "module",
   "license": "MIT",
@@ -36,7 +36,7 @@
   },
   "files": [
     "dist",
-    "src/style.css"
+    "src"
   ],
   "scripts": {
     "dev": "vite build --watch",
