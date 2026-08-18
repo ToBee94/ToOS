@@ -1,0 +1,33 @@
+export { default as ToOSDesktop, type ToOSDesktopProps } from "./components/Desktop";
+export { default as Window } from "./components/Window";
+export { default as TopBar, type Tab } from "./components/TopBar";
+export { default as CommandMenu, flattenMenuItems, type MenuItem, type MenuLeaf, type MenuFolder } from "./components/CommandMenu";
+export { default as SystemScreens, type Power, type Phase } from "./components/SystemScreens";
+export { default as BootSequence } from "./components/BootSequence";
+export { default as ParticleNet } from "./components/ParticleNet";
+export { default as NotificationCenter } from "./components/NotificationCenter";
+export { default as CookieBanner } from "./components/CookieBanner";
+export { default as Terminal } from "./components/Terminal";
+export { SETTINGS_TABS, SettingsDesign, SettingsLanguage, SettingsContent, SettingsAbout, Seg } from "./components/settings";
+
+export type { ModuleTab, ModuleDef } from "./types";
+export { DEFAULT_COMMANDS } from "./terminal/defaultCommands";
+export type { Command, CommandRegistry, CommandCtx, LinkItem } from "./terminal/types";
+export { resolvePath, listDir, joinPath, type Resolved, type ListedDir } from "./terminal/fs";
+export { useWindowClose, WindowCtx } from "./lib/windowCtx";
+
+export { useOpen, OpenCtx } from "./lib/openCtx";
+export { useSys, SysCtx, type SysAction } from "./lib/sysCtx";
+export { useFs, FsCtx } from "./lib/fsCtx";
+export { useResetArmed, ResetCtx } from "./lib/resetCtx";
+export { useWins, WinsCtx, type WinInfo } from "./lib/winsCtx";
+export { useTheme, ThemeCtx, ACCENTS, type ThemePref } from "./lib/themeCtx";
+export { useLocale, LocaleCtx, useSwitchLocale, SwitchLocaleCtx } from "./lib/localeCtx";
+export { useKlingon, KlingonCtx } from "./lib/klingonCtx";
+export { useBootTime, BootTimeCtx, formatUptime } from "./lib/bootCtx";
+export { motdLines } from "./lib/motd";
+export { useSiteConfig, SiteConfigCtx, SiteConfigProvider, type SiteConfig } from "./lib/siteConfig";
+export { PALETTE } from "./lib/palette";
+export { ICONS, techColor, type Icon } from "./lib/tech";
+export { CHROME, CHROME_LOCALES, isChromeLocale, chrome, chromeKlingon, type ChromeStrings, type ChromeLocale } from "./lib/chrome";
+export { useChrome } from "./lib/useChrome";
